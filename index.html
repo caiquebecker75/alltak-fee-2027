@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta id="versaoDeck" content="3">
+<meta id="versaoDeck" content="5">
 <title>Alltak × 75 LAB · Terceiro ano juntos e o fee de 2027</title>
 <meta name="description" content="Dois anos de parceria Alltak e 75 LAB, os resultados de 2026 e a proposta de fee do terceiro ano, de dezembro de 2026 a novembro de 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -319,8 +319,8 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 
 /* três anos */
 .anos3 .titulo h2{font-size:86px}
-.anos{position:absolute;left:96px;right:96px;top:282px;display:grid;grid-template-columns:1fr 1fr 1.08fr;gap:14px}
-.an{border-top:6px solid var(--ink);padding:16px 22px 0 0;height:500px;display:flex;flex-direction:column}
+.anos{position:absolute;left:96px;right:96px;top:290px;display:grid;grid-template-columns:1fr 1fr 1.08fr;gap:14px}
+.an{border-top:6px solid var(--ink);padding:16px 22px 0 0;height:494px;display:flex;flex-direction:column}
 .an.hoje{border-top-color:var(--azul)}
 .an.prox{background:var(--ink);color:var(--paper);border-top-color:var(--lime);padding:16px 24px 0}
 .an small{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase}
@@ -345,7 +345,7 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 .cmp .r i{font-style:normal;font-size:22px;color:var(--lime);text-align:center}
 .cmp .r .d{font-size:16px;line-height:1.3}
 .cmp .r .d strong{font-family:var(--titulo);font-size:42px;font-weight:900;display:block;line-height:1;color:var(--lime)}
-.apv{position:absolute;left:1010px;right:96px;top:270px;background:var(--paper);color:var(--ink);padding:22px 24px 20px;height:520px;display:flex;flex-direction:column}
+.apv{position:relative;position:absolute;left:1010px;right:96px;top:270px;background:var(--paper);color:var(--ink);padding:22px 24px 20px;height:520px;display:flex;flex-direction:column}
 .apv .eb{display:block;margin-bottom:6px}
 .apv .lin{display:grid;grid-template-columns:120px 1fr;align-items:end;gap:12px;padding:10px 0;border-bottom:2px solid var(--fio)}
 .apv .lin .num{font-size:70px;line-height:.86;color:var(--azul)}
@@ -365,6 +365,7 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 .tr2 small{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--lime)}
 .tr2 .num{font-size:66px;line-height:.9;margin:6px 0 8px}
 .tr2 span{font-size:16.5px;line-height:1.36;opacity:.92}
+.tr2 .num span{font-size:inherit;line-height:inherit;opacity:1}
 
 /* antes e depois */
 .virada .titulo h2{font-size:80px}
@@ -416,6 +417,175 @@ h3{font-family:var(--titulo);font-weight:900;text-transform:uppercase;letter-spa
 .quatro .bloco.est .pe{background:var(--ink);color:var(--lime)}
 .gantt .bar.saz{padding:0 6px;font-size:10px;letter-spacing:0;background:var(--lime);color:var(--ink)}
 
+/* ícones animados */
+.ico{width:28px;height:28px;flex:none;stroke-dasharray:1;stroke-dashoffset:1}
+.slide.on .ico{animation:tracar 1.3s cubic-bezier(.5,0,.2,1) .35s forwards}
+.slide.on .ico.pulsa{animation:tracar 1.3s cubic-bezier(.5,0,.2,1) .35s forwards,pulsa 2.6s ease-in-out 1.8s infinite}
+@keyframes tracar{to{stroke-dashoffset:0}}
+@keyframes pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.pdf .ico{stroke-dashoffset:0}
+
+/* transições de capítulo */
+.divisor{background:var(--ink);color:var(--paper)}
+.dv-n{position:absolute;right:-30px;bottom:-150px;font-family:var(--titulo);font-weight:900;font-size:720px;line-height:1;color:transparent;-webkit-text-stroke:2px rgba(242,241,233,.1);letter-spacing:-.04em;transform:translateX(60px);opacity:0;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),opacity 1.4s}
+.divisor.on .dv-n{transform:none;opacity:1}
+.dv-logos{position:absolute;left:0;right:0;top:250px;display:flex;align-items:center;justify-content:center;gap:34px}
+.dv-logos img.a{height:92px;transform:translateX(-120px);opacity:0;transition:transform .9s cubic-bezier(.2,.7,.2,1) .1s,opacity .9s .1s}
+.dv-logos img.l{height:58px;transform:translateX(120px);opacity:0;transition:transform .9s cubic-bezier(.2,.7,.2,1) .1s,opacity .9s .1s}
+.dv-logos i{display:block;width:0;height:4px;background:var(--c,var(--lime));transition:width .8s ease .7s}
+.divisor.on .dv-logos img{transform:none;opacity:1}
+.divisor.on .dv-logos i{width:90px}
+.dv-tx{position:absolute;left:0;right:0;top:430px;text-align:center}
+.dv-tx .eb{display:inline-flex;align-items:center;gap:12px;color:var(--c,var(--lime))}
+.dv-tx .eb .ico{width:34px;height:34px}
+.dv-tx h2{font-size:150px;line-height:.92;margin:14px 0 18px}
+.dv-tx p{font-size:22px;line-height:1.4;opacity:.85}
+.divisor .pista{position:absolute;left:96px;right:96px;bottom:70px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.divisor .pista span{height:6px;background:rgba(242,241,233,.14)}
+.divisor .pista span.f{background:var(--c,var(--lime))}
+.divisor .pista span.a{background:var(--c,var(--lime));animation:pisca 1.6s ease-in-out infinite}
+@keyframes pisca{50%{opacity:.35}}
+
+/* trilho dos três anos */
+.trilho{position:absolute;left:96px;right:96px;top:262px;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 8px,transparent 8px 14px);transform-origin:left;transform:scaleX(0);transition:transform 1.6s cubic-bezier(.2,.7,.2,1) .3s}
+.slide.on .trilho{transform:none}
+.trilho b{position:absolute;top:-7px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+.trilho b.h{border-color:var(--azul)}
+.trilho b.p{border-color:var(--ink);background:var(--lime);animation:pulsa 2s ease-in-out infinite}
+.trilho em{position:absolute;right:-4px;top:-9px;font-style:normal;font-size:20px;line-height:1}
+
+/* anel 313/330 */
+.kpi{position:relative}
+.anel{position:absolute;right:20px;top:30px;width:104px;height:104px;transform:rotate(-90deg)}
+.anel .f{fill:none;stroke:var(--fio-c);stroke-width:9}
+.anel .v{fill:none;stroke:var(--lime);stroke-width:9;stroke-linecap:round;stroke-dasharray:0 100;transition:stroke-dasharray 1.6s cubic-bezier(.2,.7,.2,1) .5s}
+.slide.on .anel .v{stroke-dasharray:95 100}
+.anel+.pc{position:absolute;right:20px;top:30px;width:104px;height:104px;display:grid;place-items:center;font-family:var(--titulo);font-weight:900;font-size:30px}
+
+/* rosca de aprovação */
+.apv .rosca{position:relative;display:grid;grid-template-columns:190px 1fr;gap:20px;align-items:center;margin:6px 0 4px}
+.apv .rosca svg{width:190px;height:190px;transform:rotate(-90deg)}
+.apv .rosca .seg{fill:none;stroke-width:15;stroke-dasharray:0 100;transition:stroke-dasharray 1.4s cubic-bezier(.2,.7,.2,1)}
+.apv .rosca .s1{stroke:var(--azul);transition-delay:.4s}.apv .rosca .s2{stroke:var(--ink);transition-delay:.9s}.apv .rosca .s3{stroke:#9C9A8F;transition-delay:1.3s}
+.slide.on .apv .rosca .s1{stroke-dasharray:41.4 100}.slide.on .apv .rosca .s2{stroke-dasharray:43.7 100}.slide.on .apv .rosca .s3{stroke-dasharray:12.5 100}
+.apv .rosca .mid{position:absolute;left:0;top:0;width:190px;height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.apv .rosca .mid strong{display:block;font-family:var(--titulo);font-weight:900;font-size:50px;line-height:.9}
+.apv .rosca .mid span{font:700 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.apv .lg div{display:grid;grid-template-columns:14px 66px 1fr;gap:8px;align-items:center;padding:9px 0;border-bottom:2px solid var(--fio)}
+.apv .lg i{width:14px;height:14px;display:block}
+.apv .lg strong{font-family:var(--titulo);font-weight:900;font-size:40px;line-height:.9}
+.apv .lg span{font-size:14.5px;line-height:1.25}
+.apv .notas div{display:flex;flex-direction:column}
+.apv .notas .ico{width:22px;height:22px;margin-bottom:4px;color:var(--ink)}
+.cmp .r b{display:flex;align-items:center;gap:10px}
+.cmp .r b .ico{width:30px;height:30px;color:var(--lime)}
+
+/* ícones nas tabelas e cartões */
+.ad .r b{display:flex;align-items:center;gap:10px}
+.ad .r b .ico{width:30px;height:30px;color:var(--azul)}
+.virada .sem .ico{width:46px;height:46px;color:var(--lime)}
+.bm .r b{display:flex;align-items:center;gap:10px}
+.bm .r b .ico{width:26px;height:26px;color:var(--lime)}
+.tr2{position:relative}
+.tr2 .ico{position:absolute;right:18px;top:16px;width:44px;height:44px;color:var(--lime)}
+.quatro .bloco{position:relative}
+.quatro .bloco>.ico{position:absolute;right:18px;top:20px;width:46px;height:46px;color:var(--lime)}
+.quatro .bloco.est>.ico{color:var(--marinho)}
+.quatro .bloco.fora>.ico{color:var(--ink)}
+
+/* logos no benchmark */
+.bm .h span{display:flex;align-items:flex-end;gap:10px;min-height:44px}
+.bm .h img.lg-i{height:26px;display:block}
+.bm .h img.lg-a{height:32px;display:block}
+.bench .titulo{width:1408px}
+.duelo{position:absolute;right:0;top:-6px;display:flex;align-items:center;gap:16px}
+.duelo img{height:34px;display:block}
+.duelo img+i+img{height:44px}
+.duelo i{font:400 14px var(--mono);font-style:normal;opacity:.6}
+.bench .titulo .eb{display:block;width:900px}
+
+/* conexão do benchmark */
+.bench .liga{position:absolute;left:0;top:0;width:1600px;height:900px;pointer-events:none}
+.liga path{fill:none;stroke:var(--lime);stroke-width:2.5;stroke-dasharray:6 8;animation:fluir 1.2s linear infinite}
+@keyframes fluir{to{stroke-dashoffset:-28}}
+.bench .liga text{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;fill:var(--lime)}
+
+/* palcos: atalho para o AR */
+.ev .vai{display:inline-flex;align-items:center;gap:8px;margin-top:8px;background:none;border:0;padding:0;color:var(--lime);font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.ev .vai .ico{width:22px;height:22px}
+
+/* racional */
+.racional .titulo h2{font-size:62px}
+.racional .col{position:absolute;top:236px;font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.racional .no{position:absolute;width:380px;display:flex;align-items:center;gap:14px;padding:0 16px;transition:transform .2s,box-shadow .2s,background .2s;z-index:2}
+.racional .no.a{background:#fff;border-left:5px solid var(--ink);height:92px}
+.racional .no.a strong{font-family:var(--titulo);font-weight:900;font-size:40px;line-height:1;min-width:96px;color:var(--azul)}
+.racional .no.a span{font-size:15.5px;line-height:1.3}
+.racional .no.b{background:var(--ink);color:var(--paper);height:92px}
+.racional .no.b .ico{width:30px;height:30px;color:var(--lime)}
+.racional .no.b span{font-family:var(--titulo);font-weight:900;font-size:24px;line-height:1.02;text-transform:uppercase}
+.racional .no.c{background:var(--azul);color:#fff;height:110px;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;padding:0 20px}
+.racional .no.c b{font-family:var(--titulo);font-weight:900;font-size:40px;text-transform:uppercase;line-height:1}
+.racional .no.c span{font-size:15px;line-height:1.3}
+.racional .no.c.res{background:var(--lime);color:var(--ink);border:3px solid var(--ink)}
+.racional .no.c.res b{font-size:44px}
+.racional .no.on{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.racional .liga{position:absolute;left:0;top:0;width:1600px;height:900px;pointer-events:none;z-index:1}
+.racional .liga path{stroke:rgba(5,5,5,.35);stroke-width:2;animation-duration:1.6s}
+.racional .liga path.on{stroke:var(--azul);stroke-width:3.5}
+.racional .liga.foco path:not(.on){opacity:.18}
+.racional .dica2{position:absolute;right:96px;top:236px}
+
+/* stand em AR */
+.arst .esq{position:absolute;left:96px;top:110px;width:560px}
+.arst h2{font-size:72px;margin:14px 0 22px}
+.arst .fx{display:grid;grid-template-columns:1fr 1fr;border-top:3px solid var(--ink)}
+.arst .fx div{padding:14px 14px 14px 0;border-bottom:2px solid var(--fio)}
+.arst .fx div:nth-child(even){padding-left:14px;border-left:2px solid var(--fio)}
+.arst .fx strong{display:block;font-family:var(--titulo);font-weight:900;font-size:44px;line-height:1;color:var(--azul)}
+.arst .fx span{font-size:15px;line-height:1.3}
+.arst .qr{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;margin-top:24px}
+.arst .qr img{width:150px;height:150px;border:3px solid var(--ink);display:block}
+.arst .qr b{display:flex;align-items:center;gap:8px;font-family:var(--titulo);font-weight:900;font-size:28px;text-transform:uppercase;line-height:1}
+.arst .qr b .ico{width:30px;height:30px;color:var(--azul)}
+.arst .qr span{display:block;font-size:15.5px;line-height:1.36;margin:6px 0 12px}
+.arst .mv{position:absolute;left:720px;right:0;top:0;bottom:0;background:radial-gradient(ellipse at 50% 60%,#fff 0%,#E7E5DA 70%)}
+.arst model-viewer{width:100%;height:100%;--poster-color:transparent;background:transparent}
+.arst .mv img.so-pdf{display:none;width:100%;height:100%;object-fit:contain}
+.pdf .arst model-viewer{display:none}
+.pdf .arst .mv img.so-pdf{display:block}
+.arst .mv .cta{position:absolute;left:40px;bottom:30px}
+.arst .mv .selo{position:absolute;right:96px;top:100px}
+
+/* cinema: títulos que se revelam */
+.slide h2.anima,.slide h1.anima{clip-path:inset(0 0 100% 0);transform:translateY(34px);transition:clip-path 1.05s cubic-bezier(.2,.7,.2,1),transform 1.05s cubic-bezier(.2,.7,.2,1),opacity .6s}
+.slide.on h2.anima,.slide.on h1.anima{clip-path:inset(-12% -4% -24% -4%);transform:none}
+.pdf .slide h2.anima,.pdf .slide h1.anima{clip-path:none}
+/* cortina nas trocas de capítulo */
+#cortina{position:absolute;inset:0;pointer-events:none;z-index:30;overflow:hidden}
+#cortina i{position:absolute;top:0;bottom:0;left:0;width:100%;transform:translateX(-101%)}
+#cortina i:nth-child(1){background:var(--lime)}
+#cortina i:nth-child(2){background:var(--ink)}
+#cortina i:nth-child(3){background:linear-gradient(90deg,transparent calc(100% - 14px),var(--azul) 0)}
+#cortina.vai i:nth-child(1){animation:cort .95s cubic-bezier(.7,0,.3,1) forwards}
+#cortina.vai i:nth-child(2){animation:cort .95s cubic-bezier(.7,0,.3,1) .07s forwards}
+#cortina.vai i:nth-child(3){animation:cort .95s cubic-bezier(.7,0,.3,1) .12s forwards}
+@keyframes cort{0%{transform:translateX(-101%)}45%,55%{transform:translateX(0)}100%{transform:translateX(101%)}}
+/* parallax com o mouse */
+.px{translate:calc(var(--mx,0)*-18px) calc(var(--my,0)*-12px);transition:translate .5s ease-out}
+.px2{translate:calc(var(--mx,0)*26px) calc(var(--my,0)*16px);transition:translate .6s ease-out}
+/* luz passando na capa */
+.capa .foto::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,transparent 38%,rgba(255,255,255,.16) 50%,transparent 62%);transform:translateX(-100%);animation:varre 7s ease-in-out 1.2s infinite}
+@keyframes varre{0%{transform:translateX(-100%)}45%,100%{transform:translateX(100%)}}
+.capa .tiro{position:absolute;left:96px;top:118px;display:flex;gap:6px;align-items:center;font:700 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+.capa .tiro i{width:9px;height:9px;border-radius:50%;background:var(--lime);animation:pisca 1.4s ease-in-out infinite}
+/* fotos com zoom lento */
+.eventos .ft img,.como .ft,.lanc .banner{transition:transform 9s ease}
+.eventos.on .ft img{transform:scale(1.04)}
+.como.on .ft,.lanc.on .banner{transform:scale(1.02)}
+/* cartões que inclinam */
+.tilt{transform-style:preserve-3d;will-change:transform}
+
 /* cursor em dois tons */
 #cursor{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px var(--paper),0 0 0 4px rgba(5,5,5,.35);pointer-events:none;z-index:99;transition:width .18s,height .18s,margin .18s,background .18s;display:none}
 #cursor.sobre{width:46px;height:46px;margin:-23px 0 0 -23px;background:transparent;box-shadow:0 0 0 2px var(--ink),0 0 0 4px var(--paper)}
@@ -423,21 +593,24 @@ body.tem-mouse #cursor{display:block}
 /* PDF */
 .pdf *{transition:none!important;animation:none!important}
 .pdf .anima{opacity:1;transform:none}
-.pdf .cta,.pdf #nav,.pdf #barra,.pdf #cursor,.pdf .so-tela{display:none!important}
+.pdf .cta,.pdf #nav,.pdf #barra,.pdf #cursor,.pdf .so-tela,.pdf #cortina,.pdf .capa .tiro{display:none!important}
+.pdf .capa .foto::after{display:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-mao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V11m0-2a1.5 1.5 0 0 1 3 0v2m0-1a1.5 1.5 0 0 1 3 0v5a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 15a1.6 1.6 0 0 1 2.6-1.8L9 15.5"/></symbol>
+<symbol id="ic-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 6h16v14H4z"/><path pathLength="1" d="M4 10h16"/><path pathLength="1" d="M8 3v5"/><path pathLength="1" d="M16 3v5"/><path pathLength="1" d="M8 14h3"/><path pathLength="1" d="M13 14h3"/><path pathLength="1" d="M8 17h3"/></symbol><symbol id="ic-foguete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 3c3 2 5 6 5 10l-2 3H9l-2-3c0-4 2-8 5-10z"/><path pathLength="1" d="M10.5 9.5a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"/><path pathLength="1" d="M9 16l-2 4 3-1"/><path pathLength="1" d="M15 16l2 4-3-1"/></symbol><symbol id="ic-loja" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 9l1.5-5h13L20 9"/><path pathLength="1" d="M4 9v11h16V9"/><path pathLength="1" d="M4 9c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3"/><path pathLength="1" d="M10 20v-5h4v5"/></symbol><symbol id="ic-globo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path pathLength="1" d="M3 12h18"/><path pathLength="1" d="M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9"/><path pathLength="1" d="M12 3c-2.5 2.5-3.8 5.5-3.8 9s1.3 6.5 3.8 9"/></symbol><symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 5h16v11H9l-5 4z"/><path pathLength="1" d="M8 9h8"/><path pathLength="1" d="M8 12h5"/></symbol><symbol id="ic-relogio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path pathLength="1" d="M12 7v5l3 2"/></symbol><symbol id="ic-raio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M13 2L5 14h6l-1 8 8-12h-6z"/></symbol><symbol id="ic-estrela" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></symbol><symbol id="ic-trofeu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M8 4h8v5a4 4 0 0 1-8 0z"/><path pathLength="1" d="M8 6H5v1a3 3 0 0 0 3 3"/><path pathLength="1" d="M16 6h3v1a3 3 0 0 1-3 3"/><path pathLength="1" d="M12 13v4"/><path pathLength="1" d="M8 20h8"/><path pathLength="1" d="M9.5 17h5v3h-5z"/></symbol><symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path pathLength="1" d="M8 12.5l3 3 5-6"/></symbol><symbol id="ic-gente" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M6 9a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path pathLength="1" d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path pathLength="1" d="M15 6.5a2.5 2.5 0 1 1 0 5"/><path pathLength="1" d="M17 14.5c2.4.6 4 2.8 4 5.5"/></symbol><symbol id="ic-grafico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 20h16"/><path pathLength="1" d="M7 20v-6"/><path pathLength="1" d="M11 20V9"/><path pathLength="1" d="M15 20v-8"/><path pathLength="1" d="M19 20V5"/></symbol><symbol id="ic-alvo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path pathLength="1" d="M7 12a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"/><path pathLength="1" d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path pathLength="1" d="M12 12l7-7"/><path pathLength="1" d="M16 5h3v3"/></symbol><symbol id="ic-cubo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path pathLength="1" d="M4 7.5l8 4.5 8-4.5"/><path pathLength="1" d="M12 12v9"/></symbol><symbol id="ic-camadas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 4l9 4.5-9 4.5-9-4.5z"/><path pathLength="1" d="M3 12.5l9 4.5 9-4.5"/><path pathLength="1" d="M3 16.5l9 4.5 9-4.5"/></symbol><symbol id="ic-mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 10v4h3l7 4V6L7 10z"/><path pathLength="1" d="M17 9.5a3.5 3.5 0 0 1 0 5"/><path pathLength="1" d="M19.5 7a7 7 0 0 1 0 10"/></symbol><symbol id="ic-fogo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.7 1 2.7 2 3 0-3 .2-5.5.5-8z"/></symbol><symbol id="ic-caixa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M3 8l9-4.5L21 8v9l-9 4.5L3 17z"/><path pathLength="1" d="M3 8l9 4.5L21 8"/><path pathLength="1" d="M12 12.5v9"/><path pathLength="1" d="M7.5 5.8l9 4.5"/></symbol><symbol id="ic-gota" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M12 3c3.5 4.5 6 7.8 6 11a6 6 0 0 1-12 0c0-3.2 2.5-6.5 6-11z"/><path pathLength="1" d="M9 14a3 3 0 0 0 3 3"/></symbol><symbol id="ic-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 10.5a6.5 6.5 0 1 0 13 0a6.5 6.5 0 1 0 -13 0"/><path pathLength="1" d="M15.5 15.5L21 21"/></symbol><symbol id="ic-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 8V5h3"/><path pathLength="1" d="M17 5h3v3"/><path pathLength="1" d="M20 16v3h-3"/><path pathLength="1" d="M7 19H4v-3"/><path pathLength="1" d="M12 6l5 3v6l-5 3-5-3V9z"/><path pathLength="1" d="M7 9l5 3 5-3"/><path pathLength="1" d="M12 12v6"/></symbol>
 <symbol id="i-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12.5l5 5L20 6.5"/></symbol>
 </defs></svg>
 <div id="wrap"><div id="stage">
 
 <!-- 01 capa -->
 <section class="slide capa on" data-t="Capa">
-  <div class="foto" role="img" aria-label="Stand Alltak RevestFácil para a Haus Decor 2027, criado pela 75 LAB"></div><div class="veu"></div>
+  <div class="foto px" role="img" aria-label="Stand Alltak RevestFácil para a Haus Decor 2027, criado pela 75 LAB"></div><div class="veu"></div>
   <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div></div>
+  <div class="tiro so-tela"><i></i>Alltak × 75 LAB · ano 3</div>
   <div class="tx">
     <span class="eb anima"><b>(Renovação)</b> Terceiro ano · Fee 2027 · novembro de 2026</span>
     <h1 class="anima d1">Dois anos de base. <span class="cl">O terceiro é escala.</span></h1>
@@ -456,12 +629,21 @@ body.tem-mouse #cursor{display:block}
     <h2 class="anima d1">Cinco partes, <span class="ca">uma decisão</span> no fim.</h2>
   </div>
   <div class="trilha anima d2">
-    <button class="cap" data-ir="3"><span class="n">01</span><b>Os números</b><span>Três anos juntos, 313 subtarefas feitas, a performance e o que mudou com o Ariuno.</span><small>Telas 3 a 7</small></button>
-    <button class="cap" data-ir="8"><span class="n">02</span><b>O que fizemos</b><span>Palcos, lançamentos, desafios superados e o antes e depois.</span><small>Telas 8 a 11</small></button>
-    <button class="cap" data-ir="12"><span class="n">03</span><b>Mercado</b><span>A Imprimax no mesmo período, para onde foi o tempo e quatro ajustes.</span><small>Telas 12 a 14</small></button>
-    <button class="cap" data-ir="15"><span class="n">04</span><b>O fee de 2027</b><span>Calendário, entregáveis, três planos e a nova forma de trabalhar.</span><small>Telas 15 a 18</small></button>
-    <button class="cap" data-ir="19"><span class="n">05</span><b>A decisão</b><span>Quatro passos até 30 de novembro, quando o contrato atual vence.</span><small>Tela 19</small></button>
+    <button class="cap" data-ir="3"><span class="n">01</span><b>Os números</b><span>Três anos juntos, 313 subtarefas feitas, a performance e o que mudou com o Ariuno.</span><small>Telas 3 a 8</small></button>
+    <button class="cap" data-ir="9"><span class="n">02</span><b>O que fizemos</b><span>Palcos, lançamentos, desafios superados e o antes e depois.</span><small>Telas 9 a 13</small></button>
+    <button class="cap" data-ir="14"><span class="n">03</span><b>Mercado</b><span>A Imprimax no mesmo período, para onde foi o tempo e quatro ajustes.</span><small>Telas 14 a 17</small></button>
+    <button class="cap" data-ir="18"><span class="n">04</span><b>O fee de 2027</b><span>O racional, o calendário, o stand em AR, os entregáveis e os planos.</span><small>Telas 18 a 24</small></button>
+    <button class="cap" data-ir="25"><span class="n">05</span><b>A decisão</b><span>Quatro passos até 30 de novembro, quando o contrato atual vence.</span><small>Telas 25 a 27</small></button>
   </div>
+  <div class="grao"></div>
+</section>
+
+<!-- transição 01 -->
+<section class="slide divisor" data-t="Parte 01 · Os números" style="--c:var(--lime)">
+  <div class="dv-n px2">01</div>
+  <div class="dv-logos"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i></i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
+  <div class="dv-tx anima d2"><span class="eb"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-grafico"/></svg>Parte 01 de 05</span><h2>Os números</h2><p>Três anos juntos, um time inteiro e o que o sistema mostra.</p></div>
+  <div class="pista"><span class="a"></span><span class=""></span><span class=""></span><span class=""></span><span class=""></span></div>
   <div class="grao"></div>
 </section>
 
@@ -472,6 +654,7 @@ body.tem-mouse #cursor{display:block}
     <span class="eb anima">2025, 2026 e o que vem</span>
     <h2 class="anima d1">Terceiro ano juntos. <span class="ca">Agora é escala.</span></h2>
   </div>
+  <div class="trilho"><b style="left:0"></b><b class="h" style="left:462px"></b><b class="p" style="left:924px"></b><em>›</em></div>
   <div class="anos">
     <div class="an anima d1"><small>Ano 1 · a chegada</small><div class="num">2025</div><b>Projeto a projeto</b><ul><li>Stand da Haus Decor 2025</li><li>Cambea e Equipotel</li><li>KV e catálogo Wraps</li><li>Catálogo virtual Decor</li><li>Clusterização das revendas</li><li>Store in store BMW</li></ul><div class="rod">15 trabalhos, do ALL001 ao ALL015</div></div>
     <div class="an hoje anima d2"><small>Ano 2 · a base</small><div class="num">2026</div><b>Fee e time dedicado</b><ul><li>93 trabalhos e 313 subtarefas feitas</li><li>Seis linhas lançadas</li><li>Cinco palcos, duas Haus Decor</li><li>Site novo em três idiomas</li><li>Aprovação e nota no Ariuno</li></ul><div class="rod">2.640 horas registradas</div></div>
@@ -490,7 +673,7 @@ body.tem-mouse #cursor{display:block}
   </div>
   <div class="kpis anima d2">
     <div class="kpi"><div class="num" data-n="93">93</div><b>Trabalhos</b><span>78 concluídos e 15 em andamento, de post a stand de feira.</span></div>
-    <div class="kpi"><div class="num" data-n="313">313</div><b>Subtarefas feitas</b><span>De 330 abertas no ano, 95%. Com os 78 trabalhos concluídos, são 391 entregas.</span></div>
+    <div class="kpi"><div class="num" data-n="313">313</div><svg class="anel" viewBox="0 0 100 100" aria-hidden="true"><path class="f" pathLength="100" d="M50 8a42 42 0 1 1 0 84a42 42 0 1 1 0-84"/><path class="v" pathLength="100" d="M50 8a42 42 0 1 1 0 84a42 42 0 1 1 0-84"/></svg><div class="pc">95%</div><b>Subtarefas feitas</b><span>De 330 abertas no ano, 95%. Com os 78 trabalhos concluídos, são 391 entregas.</span></div>
     <div class="kpi"><div class="num" data-n="2640" data-mil="1">2.640</div><b>Horas</b><span>Registradas pelo time no sistema de gestão, cerca de 240 por mês.</span></div>
     <div class="kpi"><div class="num" data-n="11">11</div><b>Pessoas</b><span>Criação, 3D, atendimento, tráfego, compras e direção na conta.</span></div>
   </div>
@@ -544,18 +727,17 @@ body.tem-mouse #cursor{display:block}
   </div>
   <div class="cmp anima d2">
     <div class="h"><span></span><span>Dez a jun</span><span></span><span>Com o Ariuno, jul a nov</span></div>
-    <div class="r"><b>Ritmo</b><div class="a"><strong>4,8</strong>entregas por semana</div><i>→</i><div class="d"><strong>13,4</strong>entregas por semana, 2,8 vezes mais</div></div>
-    <div class="r"><b>Velocidade</b><div class="a"><strong>3,0 dias</strong>por subtarefa (mediana)</div><i>→</i><div class="d"><strong>2,8 dias</strong>com o dobro de subtarefas no período</div></div>
-    <div class="r"><b>Conversa</b><div class="a"><strong>Fora do card</strong>e-mail e mensagem</div><i>→</i><div class="d"><strong>1.201</strong>trocas registradas no próprio pedido</div></div>
-    <div class="r"><b>Horas</b><div class="a"><strong>Por trabalho</strong>lançadas no fim</div><i>→</i><div class="d"><strong>961 h</strong>registradas hora a hora, por pessoa</div></div>
-    <div class="r"><b>Avaliação</b><div class="a"><strong>Não existia</strong></div><i>→</i><div class="d"><strong>47</strong>avaliações da Alltak com nota</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-raio"/></svg>Ritmo</b><div class="a"><strong>4,8</strong>entregas por semana</div><i>→</i><div class="d"><strong>13,4</strong>entregas por semana, 2,8 vezes mais</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-relogio"/></svg>Velocidade</b><div class="a"><strong>3,0 dias</strong>por subtarefa (mediana)</div><i>→</i><div class="d"><strong>2,8 dias</strong>com o dobro de subtarefas no período</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-chat"/></svg>Conversa</b><div class="a"><strong>Fora do card</strong>e-mail e mensagem</div><i>→</i><div class="d"><strong>1.201</strong>trocas registradas no próprio pedido</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-grafico"/></svg>Horas</b><div class="a"><strong>Por trabalho</strong>lançadas no fim</div><i>→</i><div class="d"><strong>961 h</strong>registradas hora a hora, por pessoa</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-estrela"/></svg>Avaliação</b><div class="a"><strong>Não existia</strong></div><i>→</i><div class="d"><strong>47</strong>avaliações da Alltak com nota</div></div>
   </div>
   <div class="apv anima d3">
     <span class="eb">Aprovação na peça · desde 30/07</span>
-    <div class="lin"><div class="num">70</div><span>peças aprovadas pela Alltak</span></div>
-    <div class="lin"><div class="num">74</div><span>ajustes pedidos, cada um com o comentário na peça</span></div>
-    <div class="lin"><div class="num">22</div><span>peças esperando o parecer da Alltak no sistema</span></div>
-    <div class="notas"><div><strong>4,96</strong><span>Criação</span></div><div><strong>4,98</strong><span>Conceito</span></div><div><strong>4,98</strong><span>Prazo</span></div></div>
+    <div class="rosca"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="seg s1" pathLength="100" d="M50 8a42 42 0 1 1 0 84a42 42 0 1 1 0-84"/><path class="seg s2" pathLength="100" style="stroke-dashoffset:-42.2" d="M50 8a42 42 0 1 1 0 84a42 42 0 1 1 0-84"/><path class="seg s3" pathLength="100" style="stroke-dashoffset:-86.7" d="M50 8a42 42 0 1 1 0 84a42 42 0 1 1 0-84"/></svg><div class="mid"><strong data-n="166">166</strong><span>peças enviadas</span></div>
+      <div class="lg"><div><i style="background:var(--azul)"></i><strong data-n="70">70</strong><span>aprovadas pela Alltak</span></div><div><i style="background:var(--ink)"></i><strong data-n="74">74</strong><span>ajustes pedidos, com comentário na peça</span></div><div><i style="background:#9C9A8F"></i><strong data-n="22">22</strong><span>esperando parecer da Alltak</span></div></div></div>
+    <div class="notas"><div><svg class="ico " aria-hidden="true"><use href="#ic-estrela"/></svg><strong>4,96</strong><span>Criação</span></div><div><svg class="ico " aria-hidden="true"><use href="#ic-estrela"/></svg><strong>4,98</strong><span>Conceito</span></div><div><svg class="ico " aria-hidden="true"><use href="#ic-estrela"/></svg><strong>4,98</strong><span>Prazo</span></div></div>
     <small>Nota média de 0 a 5. Em 45 das 47 avaliações, a criação levou 5.</small>
   </div>
   <div class="fonte">Fonte: Ariuno, de 01/12/2025 a 05/11/2026. Ritmo inclui trabalhos e subtarefas concluídos; parte da alta vem de as subtarefas passarem a ser registradas uma a uma. Aprovações: fluxo de envio ao cliente, de 30/07 a 04/11/2026.</div>
@@ -589,9 +771,18 @@ body.tem-mouse #cursor{display:block}
   <div class="grao"></div>
 </section>
 
+<!-- transição 02 -->
+<section class="slide divisor" data-t="Parte 02 · O que fizemos" style="--c:var(--lime)">
+  <div class="dv-n px2">02</div>
+  <div class="dv-logos"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i></i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
+  <div class="dv-tx anima d2"><span class="eb"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-trofeu"/></svg>Parte 02 de 05</span><h2>O que fizemos</h2><p>Palcos, lançamentos e os desafios que viraram resultado.</p></div>
+  <div class="pista"><span class="f"></span><span class="a"></span><span class=""></span><span class=""></span><span class=""></span></div>
+  <div class="grao"></div>
+</section>
+
 <!-- 05 eventos -->
 <section class="slide escuro eventos" data-t="Eventos">
-  <div class="ft anima"><img src="assets/stand26.jpg" alt="Ilha da Alltak na Haus Decor, projeto 75 LAB">
+  <div class="ft anima"><img class="px" src="assets/stand26.jpg" alt="Ilha da Alltak na Haus Decor, projeto 75 LAB">
     <div class="leg"><div class="num">15 dias</div><p>do desafio à montagem da primeira Haus Decor: ilha de 84 m², quatro ambientes e aplicação ao vivo.</p></div>
   </div>
   <div class="topo" style="left:770px"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(06)</b> Palcos</span></div>
@@ -601,7 +792,7 @@ body.tem-mouse #cursor{display:block}
     <div class="ev anima d2"><small>Jul · Festa</small><div><b>Disco de Ouro 2026</b><span>Conceito, convite, RSVP, pulseira, placas Top 20 e instagramável.</span></div></div>
     <div class="ev anima d3"><small>Ago · Evento</small><div><b>Cambea #15</b><span>Stand, troféu AllDominus, layout do carro, stickers e credenciais.</span></div></div>
     <div class="ev anima d3"><small>Ago · Encontro</small><div><b>Pro-Experts</b><span>Encontro com o SENAI e plataforma própria de inscrição.</span></div></div>
-    <div class="ev anima d4"><small>Fev 27 · Feira</small><div><b>Haus Decor 2027</b><span>Stand do RevestFácil já em criação, com 3D e realidade aumentada.</span></div></div>
+    <div class="ev anima d4"><small>Fev 27 · Feira</small><div><b>Haus Decor 2027</b><span>Stand do RevestFácil já em criação, com 3D e realidade aumentada.</span><button class="vai so-tela" data-ir="21"><svg class="ico " aria-hidden="true"><use href="#ic-ar"/></svg>Ver o stand em AR</button></div></div>
   </div>
   <div class="grao"></div>
 </section>
@@ -633,12 +824,12 @@ body.tem-mouse #cursor{display:block}
     <p class="anima d1">Prazo curto, volume alto e lançamento em cima de lançamento. Vale parar para comemorar o que o time da Alltak e o da 75 LAB fizeram juntos.</p>
   </div>
   <div class="mural">
-    <div class="tr2 anima d1"><small>Lançamentos</small><div class="num">6 em 6 meses</div><span>Kroma Linho, Kroma Forma Listras, RevestFácil, Tramatto, Black Piano e Evolution Pro, de março a agosto.</span></div>
-    <div class="tr2 anima d1"><small>Site</small><div class="num">222 páginas</div><span>levadas do site antigo para o novo sem perder nenhuma, com 31 linhas, 554 cores com foto e três idiomas.</span></div>
-    <div class="tr2 anima d2"><small>Pro-Experts</small><div class="num">25 dias</div><span>entre a inscrição no ar e o encontro no SENAI, com página e base de inscritos da própria Alltak.</span></div>
-    <div class="tr2 anima d2"><small>Catálogos</small><div class="num">28.264</div><span>catálogos entregues: 13.264 do Decor e 15.000 do Sign, com amostra real de cada cor.</span></div>
-    <div class="tr2 anima d3"><small>Evolution Pro</small><div class="num">21 cores</div><span>lançadas completas: página com SEO, catálogo, boletim técnico, vídeos, workshop e expositor.</span></div>
-    <div class="tr2 anima d3"><small>Outubro</small><div class="num">76 entregas</div><span>no mês dos 25 anos da Alltak, o maior do ano, junto com o site em três idiomas.</span></div>
+    <div class="tr2 anima d1"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-foguete"/></svg><small>Lançamentos</small><div class="num">6 em 6 meses</div><span>Kroma Linho, Kroma Forma Listras, RevestFácil, Tramatto, Black Piano e Evolution Pro, de março a agosto.</span></div>
+    <div class="tr2 anima d1"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-globo"/></svg><small>Site</small><div class="num"><span data-n="222">222</span> páginas</div><span>levadas do site antigo para o novo sem perder nenhuma, com 31 linhas, 554 cores com foto e três idiomas.</span></div>
+    <div class="tr2 anima d2"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-gente"/></svg><small>Pro-Experts</small><div class="num"><span data-n="25">25</span> dias</div><span>entre a inscrição no ar e o encontro no SENAI, com página e base de inscritos da própria Alltak.</span></div>
+    <div class="tr2 anima d2"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-camadas"/></svg><small>Catálogos</small><div class="num" data-n="28264" data-mil="1">28.264</div><span>catálogos entregues: 13.264 do Decor e 15.000 do Sign, com amostra real de cada cor.</span></div>
+    <div class="tr2 anima d3"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-gota"/></svg><small>Evolution Pro</small><div class="num">21 cores</div><span>lançadas completas: página com SEO, catálogo, boletim técnico, vídeos, workshop e expositor.</span></div>
+    <div class="tr2 anima d3"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-trofeu"/></svg><small>Outubro</small><div class="num"><span data-n="76">76</span> entregas</div><span>no mês dos 25 anos da Alltak, o maior do ano, junto com o site em três idiomas.</span></div>
   </div>
   <div class="grao"></div>
 </section>
@@ -652,13 +843,22 @@ body.tem-mouse #cursor{display:block}
   </div>
   <div class="ad anima d2">
     <div class="h"><span></span><span>Sem um time dedicado</span><span>Com a 75 LAB</span></div>
-    <div class="r"><b>Feiras</b><div class="s">Stand fechado em cima da data, fornecedor a fornecedor</div><div class="c">Stand pensado com meses de antecedência, visto em <strong>3D e AR</strong> antes de montar</div></div>
-    <div class="r"><b>Lançamentos</b><div class="s">Produto novo chega à revenda só com a ficha técnica</div><div class="c"><strong>Seis linhas</strong> lançadas com kit, catálogo, expositor, página e evento</div></div>
-    <div class="r"><b>Site</b><div class="s">Site em WordPress de terceiros, só em português</div><div class="c">Site novo em <strong>três idiomas</strong>, 554 cores com foto e cor aplicada em 3D</div></div>
-    <div class="r"><b>Ponto de venda</b><div class="s">Cada revenda expõe do seu jeito</div><div class="c"><strong>Manual de merchandising</strong> e expositores que a revenda segue sozinha</div></div>
-    <div class="r"><b>Gestão</b><div class="s">Pedido solto no e-mail, sem prazo nem histórico</div><div class="c">Cada pedido no <strong>Ariuno</strong>, com prazo, aprovação na peça e nota</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-cubo"/></svg>Feiras</b><div class="s">Stand fechado em cima da data, fornecedor a fornecedor</div><div class="c">Stand pensado com meses de antecedência, visto em <strong>3D e AR</strong> antes de montar</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-foguete"/></svg>Lançamentos</b><div class="s">Produto novo chega à revenda só com a ficha técnica</div><div class="c"><strong>Seis linhas</strong> lançadas com kit, catálogo, expositor, página e evento</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-globo"/></svg>Site</b><div class="s">Site em WordPress de terceiros, só em português</div><div class="c">Site novo em <strong>três idiomas</strong>, 554 cores com foto e cor aplicada em 3D</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-loja"/></svg>Ponto de venda</b><div class="s">Cada revenda expõe do seu jeito</div><div class="c"><strong>Manual de merchandising</strong> e expositores que a revenda segue sozinha</div></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-check"/></svg>Gestão</b><div class="s">Pedido solto no e-mail, sem prazo nem histórico</div><div class="c">Cada pedido no <strong>Ariuno</strong>, com prazo, aprovação na peça e nota</div></div>
   </div>
-  <div class="sem anima d3"><b>Sem a 75 LAB</b><span>Cada feira, lançamento e catálogo volta a começar do zero, na véspera. O time da Alltak volta a apagar incêndio em vez de vender.</span></div>
+  <div class="sem anima d3"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-fogo"/></svg><b>Sem a 75 LAB</b><span>Cada feira, lançamento e catálogo volta a começar do zero, na véspera. O time da Alltak volta a apagar incêndio em vez de vender.</span></div>
+  <div class="grao"></div>
+</section>
+
+<!-- transição 03 -->
+<section class="slide divisor" data-t="Parte 03 · Mercado" style="--c:var(--lime)">
+  <div class="dv-n px2">03</div>
+  <div class="dv-logos"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i></i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
+  <div class="dv-tx anima d2"><span class="eb"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-lupa"/></svg>Parte 03 de 05</span><h2>Mercado</h2><p>A concorrência no mesmo período e o que aprendemos com o ano.</p></div>
+  <div class="pista"><span class="f"></span><span class="f"></span><span class="a"></span><span class=""></span><span class=""></span></div>
   <div class="grao"></div>
 </section>
 
@@ -670,13 +870,14 @@ body.tem-mouse #cursor{display:block}
     <h2 class="anima d1">A Imprimax lançou produto. <span class="cl">A Alltak lançou marca.</span></h2>
   </div>
   <div class="bm anima d2">
-    <div class="h"><span></span><span>Imprimax</span><span>Alltak com a 75 LAB</span></div>
-    <div class="r"><b>Lançamentos</b><span>Lotes de produto em janeiro, fevereiro, abril, junho, julho e outubro, divulgados em página e PDF</span><span>Seis linhas com campanha, kit, catálogo, expositor e evento</span></div>
-    <div class="r"><b>Site</b><span>Só em português, com catálogo em PDF para baixar</span><span>Três idiomas, 554 cores com foto e cor aplicada em 3D</span></div>
-    <div class="r"><b>Feiras</b><span>Não achamos registro público de estande próprio em 2026</span><span>Cinco palcos, da Haus Decor ao Cambea</span></div>
-    <div class="r"><b>Ponto de venda</b><span>Não achamos manual ou expositor de PDV publicado</span><span>Manual de merchandising e expositores padrão</span></div>
-    <div class="r eles"><b>Aplicadores</b><span>Escola própria, a ImprimaxTec, e lista de aplicadores credenciados</span><span>Pro-Experts no SENAI e, em 2027, o Pro Revolution</span></div>
+    <div class="h"><span></span><span><img class="lg-i" src="assets/imprimax-logo.png" alt="Imprimax"></span><span><img class="lg-a" src="assets/escudo-oficial.png" alt="Alltak"> com a 75 LAB</span></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-foguete"/></svg>Lançamentos</b><span>Lotes de produto em janeiro, fevereiro, abril, junho, julho e outubro, divulgados em página e PDF</span><span>Seis linhas com campanha, kit, catálogo, expositor e evento</span></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-globo"/></svg>Site</b><span>Só em português, com catálogo em PDF para baixar</span><span>Três idiomas, 554 cores com foto e cor aplicada em 3D</span></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-cubo"/></svg>Feiras</b><span>Não achamos registro público de estande próprio em 2026</span><span>Cinco palcos, da Haus Decor ao Cambea</span></div>
+    <div class="r"><b><svg class="ico " aria-hidden="true"><use href="#ic-loja"/></svg>Ponto de venda</b><span>Não achamos manual ou expositor de PDV publicado</span><span>Manual de merchandising e expositores padrão</span></div>
+    <div class="r eles"><b><svg class="ico " aria-hidden="true"><use href="#ic-gente"/></svg>Aplicadores</b><span>Escola própria, a ImprimaxTec, e lista de aplicadores credenciados</span><span>Pro-Experts no SENAI e, em 2027, o Pro Revolution</span></div>
   </div>
+  <svg class="liga anima d4" viewBox="0 0 1600 900" aria-hidden="true"><path d="M490 634 C490 735, 1320 735, 1320 572" marker-end="url(#pontaL)"/><defs><marker id="pontaL" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C0EE4E" style="animation:none;stroke:none"/></marker></defs><text x="905" y="742" text-anchor="middle">Nossa resposta em 2027: Pro Revolution</text></svg>
   <div class="lado anima d3">
     <div class="num">5,5 mi</div>
     <p>de metros por mês e 15.000 m² de fábrica: a Imprimax tem escala de produção.</p>
@@ -726,9 +927,44 @@ body.tem-mouse #cursor{display:block}
   <div class="grao"></div>
 </section>
 
+<!-- transição 04 -->
+<section class="slide divisor" data-t="Parte 04 · O fee de 2027" style="--c:var(--lime)">
+  <div class="dv-n px2">04</div>
+  <div class="dv-logos"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i></i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
+  <div class="dv-tx anima d2"><span class="eb"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-cal"/></svg>Parte 04 de 05</span><h2>O fee de 2027</h2><p>O racional, o calendário, os entregáveis e os planos.</p></div>
+  <div class="pista"><span class="f"></span><span class="f"></span><span class="f"></span><span class="a"></span><span class=""></span></div>
+  <div class="grao"></div>
+</section>
+
+<!-- racional -->
+<section class="slide claro racional" data-t="O racional">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="cta"><svg><use href="#i-mao"/></svg>Passe o mouse em um ponto</span></div>
+  <div class="titulo">
+    <span class="eb anima"><b>(13)</b> O racional</span>
+    <h2 class="anima d1">Cada decisão de 2027 <span class="ca">nasce de um número de 2026.</span></h2>
+  </div>
+  <span class="col" style="left:96px">O que vimos em 2026</span><span class="col" style="left:600px">O que decidimos</span><span class="col" style="left:1124px">Onde entra no fee de 2027</span>
+  <svg class="liga anima d2" viewBox="0 0 1600 900" aria-hidden="true"><path data-k="k1" d="M476 308 L600 308"/><path data-k="k1" d="M980 308 C1052 308 1052 577 1124 577"/><path data-k="k2" d="M476 412 L600 412"/><path data-k="k2" d="M980 412 C1052 412 1052 715 1124 715"/><path data-k="k3" d="M476 516 L600 516"/><path data-k="k3" d="M980 516 C1052 516 1052 447 1124 447"/><path data-k="k4" d="M476 620 L600 620"/><path data-k="k4" d="M980 620 C1052 620 1052 305 1124 305"/><path data-k="k5" d="M476 724 L600 724"/><path data-k="k5" d="M980 724 C1052 724 1052 329 1124 329"/><path data-k="k4 k5" d="M1504 317 C1556 317 1556 700 1504 700"/><path data-k="k3" d="M1504 447 C1556 447 1556 714 1504 714"/><path data-k="k1" d="M1504 577 C1556 577 1556 728 1504 728"/></svg>
+  <div class="no a anima d1" data-k="k1" style="left:96px;top:262px"><strong>65%</strong><span>das horas em dez projetos com data conhecida meses antes</span></div>
+  <div class="no a anima d1" data-k="k2" style="left:96px;top:366px"><strong>3,8x</strong><span>mais horas em outubro do que em agosto, sem aviso</span></div>
+  <div class="no a anima d1" data-k="k3" style="left:96px;top:470px"><strong>38%</strong><span>das subtarefas foram ajuste ou nova versão</span></div>
+  <div class="no a anima d1" data-k="k4" style="left:96px;top:574px"><strong>?</strong><span>nenhum número de venda ligado ao que entregamos</span></div>
+  <div class="no a anima d1" data-k="k5" style="left:96px;top:678px"><strong style="font-size:30px">Imprimax</strong><span>à frente na escola de aplicadores</span></div>
+  <div class="no b anima d2" data-k="k1" style="left:600px;top:262px"><svg class="ico " aria-hidden="true"><use href="#ic-cal"/></svg><span>Calendário fechado em dezembro</span></div>
+  <div class="no b anima d2" data-k="k2" style="left:600px;top:366px"><svg class="ico " aria-hidden="true"><use href="#ic-relogio"/></svg><span>Capacidade reservada por mês</span></div>
+  <div class="no b anima d2" data-k="k3" style="left:600px;top:470px"><svg class="ico " aria-hidden="true"><use href="#ic-check"/></svg><span>Briefing em formulário e aprovação na peça</span></div>
+  <div class="no b anima d2" data-k="k4" style="left:600px;top:574px"><svg class="ico " aria-hidden="true"><use href="#ic-grafico"/></svg><span>Plano de marketing, de trade e painel</span></div>
+  <div class="no b anima d2" data-k="k5" style="left:600px;top:678px"><svg class="ico " aria-hidden="true"><use href="#ic-gente"/></svg><span>Pro Revolution para os Pro-Experts</span></div>
+  <div class="no c anima d3" data-k="k4 k5" style="left:1124px;top:262px"><b>Estratégia</b><span>Plano de marketing, trade e Pro Revolution</span></div>
+  <div class="no c anima d3" data-k="k3" style="left:1124px;top:392px"><b>Base</b><span>Rotina, aprovação na peça e semanal</span></div>
+  <div class="no c anima d3" data-k="k1" style="left:1124px;top:522px"><b>Calendário</b><span>Feiras, eventos e lançamentos com data</span></div>
+  <div class="no c res anima d3" data-k="k1 k2 k3 k4 k5" style="left:1124px;top:660px"><b>Plano Calendário</b><span>R$ 29.073 por mês, cerca de 240 h</span></div>
+  <div class="grao"></div>
+</section>
+
 <!-- 10 calendário -->
 <section class="slide claro cal" data-t="Calendário 2027">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(13)</b> Calendário 2027</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(14)</b> Calendário 2027</span></div>
   <div class="titulo">
     <span class="eb anima">Dezembro de 2026 a novembro de 2027</span>
     <h2 class="anima d1">2027 já tem data. <span class="ca">O fee nasce com ela.</span></h2>
@@ -749,18 +985,41 @@ body.tem-mouse #cursor{display:block}
   <div class="grao"></div>
 </section>
 
+<!-- stand em AR -->
+<section class="slide claro arst" data-t="Haus Decor 2027 em AR">
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(15)</b> Haus Decor 2027</span></div>
+  <div class="esq">
+    <span class="eb anima">Stand RevestFácil · 22 a 26/02/2027 · São Paulo Expo</span>
+    <h2 class="anima d1">O primeiro entregável de 2027 <span class="ca">já dá para visitar.</span></h2>
+    <div class="fx anima d2">
+      <div><strong>12 × 7 m</strong><span>84 m² de stand</span></div>
+      <div><strong>6,8 m</strong><span>até o topo da testeira</span></div>
+      <div><strong>Dezembro</strong><span>projeto técnico, cotação e produção</span></div>
+      <div><strong>Kit</strong><span>RevestFácil e conteúdo de pré-feira</span></div>
+    </div>
+    <div class="qr anima d3"><img src="assets/qr-ar.png" alt="QR code para abrir o stand em realidade aumentada"><div><b><svg class="ico pulsa" aria-hidden="true"><use href="#ic-ar"/></svg>Veja em tamanho real</b><span>Aponte a câmera do celular para o código e coloque o stand no chão da sala.</span><a class="botao seta so-tela" href="https://projetos.75lab.com.br/ar/alltak-stand-revest-facil/" target="_blank" rel="noopener">Abrir em AR</a></div></div>
+  </div>
+  <div class="mv anima d1">
+    <model-viewer id="mvStand" poster="assets/ar-r05.webp" data-src="https://projetos.75lab.com.br/ar/alltak-stand-revest-facil/r05.glb" data-ios="https://projetos.75lab.com.br/ar/alltak-stand-revest-facil/r05.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none" shadow-intensity="1" exposure="1.05" camera-orbit="35deg 70deg auto" alt="Stand Alltak RevestFácil da Haus Decor 2027 em 3D"></model-viewer>
+    <img class="so-pdf" src="assets/ar-r05.webp" alt="Stand Alltak RevestFácil da Haus Decor 2027">
+    <span class="selo">3D ao vivo</span>
+    <span class="cta so-tela"><svg><use href="#i-mao"/></svg>Arraste para girar</span>
+  </div>
+  <div class="grao"></div>
+</section>
+
 <!-- entregáveis -->
 <section class="slide azul modelo entr" data-t="Entregáveis 2027">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(14)</b> Entregáveis</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(16)</b> Entregáveis</span></div>
   <div class="titulo">
     <span class="eb anima">O que entra no fee de 2027</span>
     <h2 class="anima d1">Da estratégia <span style="color:var(--ink)">ao post do dia.</span></h2>
   </div>
   <div class="quatro">
-    <div class="bloco est anima d1"><span class="tag">Dentro do fee · novo</span><h3>Estratégia</h3><p class="q">O plano que organiza o ano antes da primeira peça.</p><ul><li>Plano de marketing anual</li><li>Plano de trade: revendas por perfil, positivação e execução no PDV</li><li>Pro Revolution: incentivo dos Pro-Experts</li><li>Painel de resultado por trimestre</li></ul><div class="pe">Entregue em janeiro</div></div>
-    <div class="bloco anima d2"><span class="tag">Dentro do fee</span><h3>Base</h3><p class="q">O que a marca precisa todo mês, sem pedir orçamento.</p><ul><li>Conteúdo e redes, com séries</li><li>Sazonais: Mães, Rock, Pais, Envelopador, Black Friday, Arquiteto</li><li>Catálogos digitais e site</li><li>Materiais de venda e semanal</li></ul><div class="pe">Ritmo fixo, todo mês</div></div>
-    <div class="bloco anima d3"><span class="tag">Dentro do fee</span><h3>Calendário</h3><p class="q">Os grandes momentos, com time reservado desde dezembro.</p><ul><li>Haus Decor 2027: stand e kit</li><li>Disco de Ouro, Cambea e Pro-Experts</li><li>Duas janelas de lançamento</li><li>Campanha dos 26 anos</li></ul><div class="pe">Criação, 3D e executivo inclusos</div></div>
-    <div class="bloco fora anima d4"><span class="tag">Fora do fee</span><h3>Produção</h3><p class="q">O que vira objeto, prêmio ou mídia, cotado peça a peça.</p><ul><li>Gráfica, catálogos e expositores</li><li>Montagem de stand</li><li>Prêmios e viagem do Pro Revolution</li><li>Mídia paga</li></ul><div class="pe">A cada R$ 315 mil, um mês sem fee</div></div>
+    <div class="bloco est anima d1"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-alvo"/></svg><span class="tag">Dentro do fee · novo</span><h3>Estratégia</h3><p class="q">O plano que organiza o ano antes da primeira peça.</p><ul><li>Plano de marketing anual</li><li>Plano de trade: revendas por perfil, positivação e execução no PDV</li><li>Pro Revolution: incentivo dos Pro-Experts</li><li>Painel de resultado por trimestre</li></ul><div class="pe">Entregue em janeiro</div></div>
+    <div class="bloco anima d2"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-mega"/></svg><span class="tag">Dentro do fee</span><h3>Base</h3><p class="q">O que a marca precisa todo mês, sem pedir orçamento.</p><ul><li>Conteúdo e redes, com séries</li><li>Sazonais: Mães, Rock, Pais, Envelopador, Black Friday, Arquiteto</li><li>Catálogos digitais e site</li><li>Materiais de venda e semanal</li></ul><div class="pe">Ritmo fixo, todo mês</div></div>
+    <div class="bloco anima d3"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-cal"/></svg><span class="tag">Dentro do fee</span><h3>Calendário</h3><p class="q">Os grandes momentos, com time reservado desde dezembro.</p><ul><li>Haus Decor 2027: stand e kit</li><li>Disco de Ouro, Cambea e Pro-Experts</li><li>Duas janelas de lançamento</li><li>Campanha dos 26 anos</li></ul><div class="pe">Criação, 3D e executivo inclusos</div></div>
+    <div class="bloco fora anima d4"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-caixa"/></svg><span class="tag">Fora do fee</span><h3>Produção</h3><p class="q">O que vira objeto, prêmio ou mídia, cotado peça a peça.</p><ul><li>Gráfica, catálogos e expositores</li><li>Montagem de stand</li><li>Prêmios e viagem do Pro Revolution</li><li>Mídia paga</li></ul><div class="pe">A cada R$ 315 mil, um mês sem fee</div></div>
   </div>
   <div class="grao"></div>
 </section>
@@ -769,7 +1028,7 @@ body.tem-mouse #cursor{display:block}
 <section class="slide claro invest" data-t="Investimento">
   <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="cta"><svg><use href="#i-mao"/></svg>Clique em um plano</span></div>
   <div class="titulo">
-    <span class="eb anima"><b>(15)</b> Investimento · 12 meses</span>
+    <span class="eb anima"><b>(17)</b> Investimento · 12 meses</span>
     <h2 class="anima d1">Fee corrigido. <span class="ca">Ano planejado.</span></h2>
   </div>
   <div class="planos anima d2">
@@ -791,7 +1050,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 13 como -->
 <section class="slide escuro como" data-t="Como vamos trabalhar">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(16)</b> Como vamos trabalhar</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(18)</b> Como vamos trabalhar</span></div>
   <div class="esq">
     <h2 class="anima">Menos versão. <span class="cl">Mais lançamento.</span></h2>
     <p class="anima d1">As 300 horas que foram para ajuste em 2026 voltam para criação. O caminho é combinar antes e aprovar no lugar certo.</p>
@@ -807,9 +1066,18 @@ body.tem-mouse #cursor{display:block}
   <div class="grao"></div>
 </section>
 
+<!-- transição 05 -->
+<section class="slide divisor" data-t="Parte 05 · A decisão" style="--c:var(--lime)">
+  <div class="dv-n px2">05</div>
+  <div class="dv-logos"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i></i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div>
+  <div class="dv-tx anima d2"><span class="eb"><svg class="ico pulsa" aria-hidden="true"><use href="#ic-check"/></svg>Parte 05 de 05</span><h2>A decisão</h2><p>Quatro passos até 30 de novembro.</p></div>
+  <div class="pista"><span class="f"></span><span class="f"></span><span class="f"></span><span class="f"></span><span class="a"></span></div>
+  <div class="grao"></div>
+</section>
+
 <!-- 14 decisão -->
 <section class="slide lime fim" data-t="Decisão">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(17)</b> Próximo passo</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-black.png" alt="75 LAB"></div><span class="eb"><b>(19)</b> Próximo passo</span></div>
   <div class="esq">
     <h2 class="anima">Seguimos para o terceiro ano?</h2>
     <p class="lead anima d1">O contrato atual vence em 30/11/2026 e só se prorroga por termo aditivo assinado antes disso. Assinando no prazo, dezembro já começa com o stand da Haus Decor em produção.</p>
@@ -828,7 +1096,7 @@ body.tem-mouse #cursor{display:block}
 
 <!-- 15 encerramento -->
 <section class="slide escuro obrigado" data-t="Obrigado">
-  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(18)</b> 75 LAB</span></div>
+  <div class="topo"><div class="par"><img class="a" src="assets/escudo-oficial.png" alt="Alltak"><i>×</i><img class="l" src="assets/75lab-wordmark-paper.png" alt="75 LAB"></div><span class="eb"><b>(20)</b> 75 LAB</span></div>
   <div class="esq">
     <h2 class="anima">Obrigado pelos <span class="cl">dois primeiros anos.</span></h2>
     <p class="anima d1">A 75 LAB junta estratégia, design e produção do mesmo lado do balcão. Foi esse time que fez 2025 e 2026 com a Alltak e que segue no terceiro ano.</p>
@@ -844,15 +1112,16 @@ body.tem-mouse #cursor{display:block}
     </div>
   </div>
   <div class="dir anima d2">
-    <div class="ft" role="img" aria-label="Stand Alltak RevestFácil em realidade aumentada"></div>
+    <div class="ft px" role="img" aria-label="Stand Alltak RevestFácil em realidade aumentada"></div>
     <div class="dados">75 LAB Estratégia, Design e Produção Ltda · CNPJ 55.470.982/0001-77<br>CENU, Torre Norte, Av. das Nações Unidas, 12.901, Brooklin, São Paulo, SP<small>contato@75lab.com.br · 75lab.com.br · @setecincolab<br>Caique Becker, Head de Trade · caique.becker@75lab.com.br<br>Daniel Coimbra, CEO · daniel.coimbra@75lab.com.br</small></div>
     <div class="acoes so-tela"><a class="botao limao seta" href="https://projetos.75lab.com.br/ar/alltak-stand-revest-facil/" target="_blank" rel="noopener">Ver o stand em AR</a><a class="botao seta" href="https://wa.me/5511986765634" target="_blank" rel="noopener">WhatsApp</a></div>
   </div>
   <div class="grao"></div>
 </section>
 
+  <div id="cortina" aria-hidden="true"><i></i><i></i><i></i></div>
   <div id="barra"><i></i></div>
-  <div id="nav"><button id="ant" aria-label="Tela anterior">‹</button><span id="cont">01 / 20</span><button id="prox" aria-label="Próxima tela">›</button></div>
+  <div id="nav"><button id="ant" aria-label="Tela anterior">‹</button><span id="cont">01 / 27</span><button id="prox" aria-label="Próxima tela">›</button></div>
 </div></div>
 <div id="cursor"></div>
 
@@ -877,8 +1146,17 @@ if(!PDF&&matchMedia("(pointer:fine)").matches){
 
 /* navegação */
 var T=$$(".slide"),at=0;
+var pronto=false,tmr=0;
 function ir(n,sem){
-  n=Math.max(0,Math.min(T.length-1,n));at=n;
+  n=Math.max(0,Math.min(T.length-1,n));clearTimeout(tmr);
+  if(pronto&&!PDF&&n!==at&&/divisor|capa/.test(T[n].className)){
+    var c=$("#cortina");c.classList.remove("vai");void c.offsetWidth;c.classList.add("vai");at=n;
+    tmr=setTimeout(function(){mostra(n,sem)},430);return;
+  }
+  mostra(n,sem);
+}
+function mostra(n,sem){
+  at=n;
   T.forEach(function(s,i){s.classList.toggle("on",i===n)});
   $("#barra i").style.width=((n+1)/T.length*100)+"%";
   $("#cont").textContent=("0"+(n+1)).slice(-2)+" / "+T.length;
@@ -894,6 +1172,7 @@ function conta(el){
 function entrar(s){
   $$(".hb .tr i,.ba .tr i",s).forEach(function(i){i.style.width=i.dataset.w+"%"});
   if(!PDF)$$("[data-n]",s).forEach(conta);
+  if(typeof carregaAR==="function")carregaAR(s);
 }
 addEventListener("keydown",function(e){
   if(["ArrowRight","PageDown"," "].indexOf(e.key)>-1){e.preventDefault();ir(at+1)}
@@ -925,6 +1204,25 @@ addEventListener("hashchange",function(){ir((parseInt(location.hash.slice(1))||1
   });
 })();
 
+
+/* racional: conexões */
+(function(){
+  var sl=$(".racional");if(!sl)return;var liga=$(".liga",sl);
+  function ks(el){return (el.dataset.k||"").split(" ")}
+  $$(".no",sl).forEach(function(n){
+    n.addEventListener("mouseenter",function(){var k=ks(n);liga.classList.add("foco");
+      $$("[data-k]",sl).forEach(function(e){var hit=ks(e).some(function(x){return k.indexOf(x)>-1});e.classList.toggle("on",hit)})});
+    n.addEventListener("mouseleave",function(){liga.classList.remove("foco");$$("[data-k]",sl).forEach(function(e){e.classList.remove("on")})});
+  });
+})();
+
+/* stand em 3D: carrega só quando a tela abre */
+function carregaAR(s){
+  var mv=$("#mvStand",s);if(!mv||PDF||mv.dataset.ok)return;mv.dataset.ok=1;
+  mv.setAttribute("src",mv.dataset.src);mv.setAttribute("ios-src",mv.dataset.ios);
+  if(!document.querySelector("script[data-mv]")){var sc=document.createElement("script");sc.type="module";sc.dataset.mv=1;sc.src="https://projetos.75lab.com.br/ar/vendor/model-viewer.min.js";document.head.appendChild(sc)}
+}
+
 /* planos */
 var P=[{n:"Plano Base",m:24900,h:150},{n:"Plano Calendário",m:29073,h:240},{n:"Plano Escala",m:36400,h:300}],FEE26=27800,ISEN=Math.floor(1193490/315000);
 function plano(i){
@@ -953,7 +1251,17 @@ window.__pdfEstado=function(){};
 /* versão nova: recarrega */
 if(!PDF&&location.protocol!=="file:"){fetch("versao.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(v){v=v.trim();var a=$("#versaoDeck").content;if(v&&v!==a&&!/[?&]v=/.test(location.search)){location.replace(location.pathname+"?v="+v+location.hash)}}).catch(function(){})}
 
-ir((parseInt(location.hash.slice(1))||1)-1,true);
+ir((parseInt(location.hash.slice(1))||1)-1,true);pronto=true;
+
+/* parallax e cartões que inclinam */
+if(!PDF&&matchMedia("(pointer:fine)").matches){
+  addEventListener("mousemove",function(e){stage.style.setProperty("--mx",(e.clientX/innerWidth*2-1).toFixed(3));stage.style.setProperty("--my",(e.clientY/innerHeight*2-1).toFixed(3))});
+  $$(".tr2,.linha,.bloco,.li,.an,.plano,.atv,.no.c").forEach(function(el){
+    el.classList.add("tilt");
+    el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transition="transform .12s ease-out";el.style.transform="perspective(900px) rotateY("+(x*7).toFixed(2)+"deg) rotateX("+(-y*7).toFixed(2)+"deg) translateZ(0)"});
+    el.addEventListener("mouseleave",function(){el.style.transition="transform .5s ease";el.style.transform=""});
+  });
+}
 })();
 </script>
 </body>
